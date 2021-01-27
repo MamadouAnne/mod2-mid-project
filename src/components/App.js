@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import NavBar from "./components/navBar";
-import Movies from "./components/movies";
-import "./App.css";
+import NavBar from "./navBar";
+import Movies from "./movies";
+import "../App.css";
 
 class App extends Component {
   state = {};
