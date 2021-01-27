@@ -5,7 +5,8 @@ class Movies extends Component {
   state = {
     movies: getMovies(),
   };
-
+  // delete method: mapping m if new movie m_id is different movies_id
+  // we will change to the state and movies
   handleDelete = (movie) => {
     const movies = this.state.movies.filter((m) => m._id !== movie._id);
     this.setState({ movies });
@@ -13,8 +14,10 @@ class Movies extends Component {
     console.log(movie);
   };
   render() {
+    // showing number of movies left in database( this.state.movies === 0 )
+    // we used object destructuring for the property length
     const { length: count } = this.state.movies;
-    // deleting a movie. this.state.movies === 0 we used object destructuring for the property length
+    // if there no more movies we will display this message
     if (count === 0) return <p>There are no movies left the database</p>;
     return (
       // showing the number of movies
