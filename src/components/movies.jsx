@@ -18,7 +18,13 @@ class Movies extends Component {
     // we used object destructuring for the property length
     const { length: count } = this.state.movies;
     // if there no more movies we will display this message
-    if (count === 0) return <p>There are no movies left the database</p>;
+    if (count === 0)
+      return (
+        <h3>
+          There are no more movies left in database
+          <small class="text-muted"></small>
+        </h3>
+      );
     return (
       // showing the number of movies
       <React.Fragment>
